@@ -29,7 +29,7 @@ export default class ProductGrid {
     if(this.filters.vegeterianOnly){
       filtred = filtred.filter(product => product.vegeterian === true);
     }
-    if(this.filters.maxSpiciness > 0){
+    if(this.filters.maxSpiciness >= 0){
       filtred = filtred.filter(product => product.spiciness <= this.filters.maxSpiciness);
     }
     if(typeof(this.filters.category) !== 'undefined' && this.filters.category.length != ''){
